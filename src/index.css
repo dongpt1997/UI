@@ -41,20 +41,44 @@ body {
 
 .todo-list li:hover {
   opacity: 0.7;
-  text-decoration: line-through;
 }
 
 .btn-delete {
   background-color: rgb(94, 16, 16);
   color: white;
-  margin-left: 620px;
+  float: right;
   border-radius: 10px;
   cursor: pointer;
   border: none;
   padding: 5px 10px;
 }
+.btn-update {
+  background-color: rgb(36, 123, 221);
+  margin-right: 10px;
+  color: white;
+  float: right;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  padding: 5px 10px;
+}
+.btn-update:hover {
+  background-color: rgb(10, 90, 182);
+}
 .btn-delete:hover {
   background-color: red;
+}
+.btn-home,
+.btn-info {
+  border: none;
+  background-color: rgb(3, 109, 3);
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+.btn-home,
+.btn-info:hover {
+  cursor: pointer;
 }
 form {
   padding: 10px;

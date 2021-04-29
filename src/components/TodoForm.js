@@ -1,24 +1,24 @@
 import React, { useState } from 'react'
-import { v4 as uuidv4 } from 'uuid'
-const TodoForm = ({ addTodo }) => {
-    const [name, setName] = useState('')
+
+const TodoForm = ({ addTodo, updateTodo }) => {
+    const [title, setTitle] = useState('')
 
     const onTitleOnchange = (e) => {
-        setName(e.target.value)
+        setTitle(e.target.value)
     }
 
     const hadleSubmit = (e) => {
         e.preventDefault()
         addTodo({
-            id: uuidv4(),
-            name
+            title
         })
-        setName('')
+        setTitle('')
     }
+
     return (
         <div >
             <form onSubmit={hadleSubmit}>
-                <input type='text' placeholder='enter your todo...' onChange={onTitleOnchange} value={name} required />
+                <input type='text' placeholder='Enter your todo...' onChange={onTitleOnchange} value={title} required />
                 <input type="submit" value="Add todo" />
             </form>
         </div>
